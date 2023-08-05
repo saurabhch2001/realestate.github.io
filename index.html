@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
+
+    <title>Document</title>
+
+    <style>
+        body {
+
+            background: #232844;
+            color: #FFF;
+            font-family: 'ABeeZee';
+        }
+
+        .page-header {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+
+            z-index: 1;
+
+        }
+
+        .page-header nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+
+        .nav-item {
+
+
+
+
+
+            font-size: 1vw;
+            border-bottom: 3px solid transparent;
+
+        }
+
+        .nav-item a.active {
+            border-bottom: 3px solid red;
+        }
+
+
+        .nav-item a:hover {
+            border-bottom: 3px solid red;
+
+        }
+
+        .page-header.is-sticky {
+            position: fixed;
+            box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
+
+            background-color: rgba(0, 0, 0, 0.593);
+
+
+            animation: slideDown 0.35s ease-out;
+        }
+
+
+
+
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+
+
+        .logo {
+            width: 2.8vw;
+
+        }
+
+
+
+        .abt-text {
+
+            font-size: 1vw;
+
+        }
+
+       
+
+        hr.hl {
+            border: 0.8vw solid #3571B7;
+            border-radius: 0.4vw;
+
+        }
+
+        hr.hl2 {
+            border: 0.2vw solid #3571B7;
+            border-radius: 0.1vw;
+
+        }
+
+        .heading_abt {
+
+            font-size: 1.2vw;
+
+        }
+
+        .subheading_abt {
+
+            font-size: 3vw;
+        }
+
+        .subheading_abt2 {
+
+            font-size: 2vw;
+        }
+
+        .card1 {
+
+            width: 15vw;
+
+
+        }
+
+        .list-inline {
+
+            font-size: 1.3vw;
+        }
+
+        .list-inline .fa {
+
+            font-size: 1vw;
+        }
+
+        .card {
+            transition: 0.5s;
+            cursor: pointer;
+            background-color: #232844;
+        }
+
+
+
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-text {
+            height: 80px;
+        }
+
+        .card::before,
+        .card::after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            transform: scale3d(0, 0, 1);
+            transition: transform .3s ease-out 0s;
+            background: rgba(255, 255, 255, 0.1);
+            content: '';
+            pointer-events: none;
+        }
+
+        .card::before {
+            transform-origin: left top;
+        }
+
+        .card::after {
+            transform-origin: right bottom;
+        }
+
+        .card:hover::before,
+        .card:hover::after,
+        .card:focus::before,
+        .card:focus::after {
+            transform: scale3d(1, 1, 1);
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+
+        }
+
+        #contactForm {
+
+            font-size: 1.2vw;
+
+        }
+
+        .icon {
+            font-size: 2vw;
+
+        }
+
+        .contactinfo {
+
+            height: 4vw;
+        }
+       
+
+
+    </style>
+
+
+
+
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+
+    <header class="page-header">
+
+        <nav class="navbar navbar-expand-sm navbar-dark " id="navbar">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="logo.png" alt="logo" class="logo img-fluid"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto ">
+                        <li class="nav-item">
+                            <a class="nav-link mx-2 active" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-2" href="#about">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-2" href="#service">Services</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link mx-2" href="#contact">Contact us</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+
+
+    <div id="home">
+
+        <div id="carouselExampleIndicators" class="carousel slide opacity-50" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="slider1.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="slider2.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="slider3.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+
+
+    </div>
+
+
+    <div id="about">
+
+        <div class="container-fluid mt-5 mb-5">
+
+
+            <div class="row mt-5">
+                <div class="col  ps-5">
+                    <h4 class="heading_abt text-secondary "> about us </h4>
+                    <h1 class="subheading_abt">We Are The Solution</h1>
+                    <hr class="hl w-25">
+
+                    <p class="abt-text ">
+                        Welcome to our estate agency, where we pride
+                        ourselves on providing exceptional service to our clients. With over 20 years of experience in
+                        the
+                        industry, we have the knowledge and expertise to help you buy, sell, or rent your property. Our
+                        team
+                        is dedicated to ensuring that you have a stress-free and successful experience. We believe that
+                        communication is key, and we will keep you informed every step of the way. Contact us today to
+                        see
+                        how we can help you achieve your property goals.
+
+                    </p><br>
+
+                    <h5></h5>
+
+                </div>
+                <div class="col mt-3 text-center">
+
+                    <img src="about.jpg" alt="" class="img-fluid abt-img border-2 border border-secondary p-3">
+
+                </div>
+
+            </div>
+
+
+            <br>
+            <div class="row mb-5 ">
+
+
+
+
+                <div class="col text-center">
+
+                    <img src="abt2.jpeg" alt="about" class="img-fluid abt-img2 border-2 border border-secondary p-3">
+
+                </div>
+
+
+                <div class="col  pe-5">
+                    <br>
+                    <h4 class="heading_abt text-secondary"> from start to finish </h4>
+                    <h1 class="subheading_abt">Client value</h1>
+                    <hr class="hl w-25">
+                    <!-- <img src="cooma1.png" alt="" class="comma"><br><br> -->
+                    <p class="abt-text  ">The ultimate goal for every client we encounter is the value and the maximum
+                        return on their investment. The
+                        quality of the project,the cost and schedule are key factors in determining that value. Many
+                        contractors
+                        do
+                        not view these factors as such. They believe quality is achieved when the cost is high and spend
+                        more
+                        time
+                        on the job. This creates disasters. We love our clients to be happy. We don't like disaster.</p>
+
+
+
+
+
+                </div>
+            </div>
+            <br>
+
+
+
+
+
+
+        </div>
+
+        <div class="container  p-3">
+
+            <div class="row d-flex justify-content-around  ps-5 pe-5">
+
+
+                <div class="col text-center ">
+
+
+
+                    <div class=" ">
+                        <img src="icon.png" alt="" class="img-fluid card1 px-2">
+                    </div>
+
+
+
+
+                    <div class="d-flex justify-content-center">
+                        <hr class="w-75 ">
+                    </div>
+                    <p class="abt-text px-3 text-center">Fully licensed and insured with industry-leading manufature and
+                        labor
+                        warranties.</p>
+
+
+                </div>
+
+
+                <div class="col text-center ">
+
+
+
+                    <div class=" ">
+                        <img src="icon4.png" alt="" class="img-fluid card1 px-2">
+                    </div>
+
+
+
+
+                    <div class="d-flex justify-content-center">
+                        <hr class="w-75 ">
+                    </div>
+                    <p class="abt-text px-3 text-center">24/7 residental and commercial emergency services and repair
+                        always
+                        available.</p>
+
+                </div>
+
+
+
+                <div class="col text-center ">
+
+
+
+                    <div class=" ">
+                        <img src="icon3.png" alt="" class="img-fluid card1 px-2">
+                    </div>
+
+
+
+
+                    <div class="d-flex justify-content-center">
+                        <hr class="w-75 ">
+                    </div>
+
+                    <p class="abt-text px-3 text-center">The highest quality products and certified, trained and
+                        professional
+                        contracter on every project with safety as our top priority.</p>
+
+                </div>
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+        </div>
+
+        <div class="container-fluid bg-primary bg-opacity-10 p-5">
+
+            <div class="head">
+
+                <div class="row">
+                    <div class="col-sm-4">
+                        <hr class="w-25 ms-auto">
+                    </div>
+                    <div class="col-sm-3">
+                        <h4 class="subheading_abt2 text-center">Architecture & Design</h4>
+                    </div>
+                    <div class="col-sm-4">
+                        <hr class="w-25 text-start">
+                    </div>
+                </div>
+
+                <br>
+
+
+
+                <p class="abt-text text-center">Architecture and design are the foundation of any great real estate
+                    property.
+                    They are the first
+                    things that catch the eye and make a lasting impression on potential buyers. A well-designed
+                    property will not only look beautiful, but it will also be functional, comfortable, and
+                    efficient.
+                    Great architecture and design can create a sense of harmony and flow, making a property feel
+                    like a
+                    true home. From the layout of the rooms to the materials used, every detail counts when it comes
+                    to
+                    creating a property that is both visually stunning and highly livable.</p>
+                <br>
+            </div>
+
+
+
+            <div class="row">
+
+
+
+
+
+
+                <div class=" col w-50 text-center">
+                    <img src="about3.jpg" alt="" class="img-fluid  p-3 border border-dark border-2">
+
+
+
+                </div>
+
+
+                <div class="col">
+
+                    <div>
+                        <h4 class="heading_abt text-secondary">soundproof rooms</h4>
+                        <hr class="hl2  w-25">
+                        <p class="abt-text">Soundproofing a room is essential for creating a peaceful and private living
+                            space. Whether you live in a noisy urban area or have loud neighbors, soundproofing can help
+                            you
+                            create a sanctuary where you can relax and unwind. There are many ways to soundproof a room,
+                            from adding insulation to the walls to installing sound-absorbing curtains or acoustic
+                            panels.
+                            With the right techniques and materials, you can create a space that is free from unwanted
+                            noise
+                            and distractions</p>
+                    </div>
+                    <div>
+                        <h4 class="heading_abt text-secondary">high quality material</h4>
+                        <hr class="hl2  w-25 d-flex justify-content-center">
+                        <p class="abt-text">When it comes to house, it's important to use high-quality materials that
+                            can stand the test of time. From the materials used in construction to the appliances and
+                            fixtures installed, everything should be of the highest quality to ensure that the property
+                            is
+                            both functional and aesthetically pleasing. High-quality products also come with warranties
+                            that
+                            provide peace of mind for buyers.</p>
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    <div id="service">
+        <div class="container-fluid p-5">
+
+            <div class="">
+                <h4 class="heading_abt text-secondary "> our service </h4>
+                <h1 class="subheading_abt">What We Have In Store For You</h1>
+                <hr class="hl w-25">
+
+
+            </div>
+            <div class="row mt-3 mb-5">
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="card p-2">
+                        <div class="card-body">
+
+                            <img class="img-fluid w-100" src="properties1.jpg" alt="Photo of sunset">
+                        </div>
+                        <div class="card-footer">
+                            <h5 class="text-center">Residental</h5>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="card p-2">
+                        <div class="card-body">
+
+                            <img class="img-fluid w-100" src="properties4.jpg" alt="Photo of sunset">
+                        </div>
+                        <div class="card-footer">
+                            <h5 class="text-center">Industrial</h5>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="card p-2">
+                        <div class="card-body">
+
+                            <img class="img-fluid w-100" src="properties2.jpg" alt="Photo of sunset">
+                        </div>
+                        <div class="card-footer">
+                            <h5 class="text-center">Commercial</h5>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="card p-2">
+                        <div class="card-body">
+
+                            <img class="img-fluid w-100" src="properties3.jpg" alt="Photo of sunset">
+                        </div>
+                        <div class="card-footer">
+                            <h5 class="text-center">Raw Land</h5>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+
+
+            <div class="row">
+                <div class="col">
+
+                    <!-- <h4 class="heading_abt text-secondary"> our services </h4> -->
+                    <h1 class="subheading_abt2">We're Here To Help You To Find Your Dream House.</h1>
+                    <hr class="hl w-50">
+                    <p class="abt-text ">
+                        Finding your dream house can be a daunting task, but it doesn't have to be. Our team is here to
+                        help
+                        you every step of the way, from searching for properties to negotiating the best deal. We
+                        understand
+                        that everyone has different needs and preferences when it comes to real estate, which is why we
+                        take
+                        the time to get to know you and your unique situation. Whether you're looking for a cozy
+                        bungalow or
+                        a sprawling estate, we will work tirelessly to find the perfect property that meets your needs
+                        and
+                        exceeds your expectations. With our expertise and dedication, you can rest assured that you will
+                        find the home of your dreams.
+                    </p>
+                    <br>
+                    <ul class="list-inline d-flex justify-content-between">
+                        <li class="list-inline-item"><i class="fa fa-arrow-right"></i> Property Management</li>
+                        <li class="list-inline-item"><i class="fa fa-arrow-right"></i> Construction Service</li>
+                        <li class="list-inline-item"><i class="fa fa-arrow-right"></i> Online Service</li>
+
+                    </ul>
+
+                </div>
+                <div class="col text-center">
+
+                    <img src="service.jpg" alt="" class="img-fluid service-img border-2 border border-secondary p-3">
+
+                </div>
+
+
+            </div>
+
+
+
+            <br><br>
+
+
+
+        </div>
+
+    </div>
+
+
+    <div id="contact">
+        <div class="container-fluid bg-primary bg-opacity-10">
+
+
+
+            <div class="  row ms-5 ">
+
+
+
+
+                <div class="col  ms-5">
+
+
+
+                    <div class=" pt-3">
+                        <h4 class="heading_abt text-secondary "> Contact us </h4>
+                        <h1 class="subheading_abt2">Contact US When you Get Around </h1>
+                        <hr class="hl w-25">
+                        <p class="abt-text "> <i class=" icon fa fa-phone"></i><span class="ms-4"> 555 555 555</span>
+                        </p>
+                        <p class="abt-text "> <i class=" icon fa fa-envelope"></i>
+                            <span class="ms-4 "> realestate@123gmail.com</span>
+                        </p>
+
+                    </div>
+
+
+                    <br>
+                    <br>
+                    <div class="row">
+                        <h4 class="subheading_abt2 ">Our Hours Of Working</h4>
+                        <br> <br> <br> <br>
+                        <div class="col">
+
+                            <div class=" w-75  ">
+
+                                <p class="abt-text">Mon-Fri<span class="text-info float-end"> : 09:00-19:00</span></p>
+                                <p class="abt-text">Saturday<span class="text-info float-end"> : 09:00-18:00</span></p>
+                                <p class="abt-text">Sunday<span class="text-info float-end"> : 10:00-17:00</span></p>
+                                <hr>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col">
+                            <div class="map">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14009.131010558725!2d77.04242715144392!3d28.62128659650445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d04d9e11a08cf%3A0xc1a5a267ef8fd396!2sUttam%20Nagar%2C%20Delhi%2C%20110059!5e0!3m2!1sen!2sin!4v1690718261750!5m2!1sen!2sin"
+                                    allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="col mt-5">
+
+                    <div class="card w-75 m-auto">
+
+                        <div class="card-header">
+
+                            <h1>Contact Form</h1>
+
+                        </div>
+                        <div class="card-body">
+
+
+
+                            <form id="contactForm">
+
+                                <!-- Name input -->
+                                <div class="mb-3">
+                                    <label class="form-label" for="name">Name</label>
+                                    <input class="form-control" id="name" type="text" placeholder="Name" required>
+                                </div>
+
+                                <!-- Email address input -->
+                                <div class="mb-3">
+                                    <label class="form-label" for="Phone no">Phone no</label>
+                                    <input class="form-control" id="Phone no" type="number" placeholder="Phone no"
+                                        required>
+                                </div>
+
+
+
+                                <!-- Email address input -->
+                                <div class="mb-3">
+                                    <label class="form-label" for="emailAddress">Email Address</label>
+                                    <input class="form-control" id="emailAddress" type="email"
+                                        placeholder="Email Address" data-sb-validations="required, email " required>
+                                </div>
+
+                                <!-- Message input -->
+                                <div class="mb-3">
+                                    <label class="form-label" for="message">Message</label>
+                                    <textarea class="form-control" id="message" type="text" placeholder="Message"
+                                        rows="2" required></textarea>
+                                </div>
+
+                                <!-- Form submit button -->
+                                <div class="d-grid">
+                                    <input type="submit" class="btn btn-primary btn-lg">
+                                    <!-- <button class="btn btn-primary btn-lg" type="submit">Submit</button> -->
+                                </div>
+
+                            </form>
+
+
+                        </div>
+
+
+
+                    </div>
+
+
+                </div>
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+    </div>
+
+
+    <footer class="mt-2">
+        <hr class="mt-2">
+
+
+        
+        <section class="mb-4 text-center">
+
+
+            <!-- Twitter -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+
+            <!-- Google -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
+
+            <!-- Instagram -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                    class="fab fa-instagram"></i></a>
+
+        
+  
+        </section>
+        <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" >
+            © 2020 Copyright:
+            <a class="text-white text-decoration-none" href="#">realestate.com</a>
+        </div>
+
+
+    </footer>
+
+    <script>
+        const header = document.querySelector(".page-header");
+        const toggleClass = "is-sticky";
+        window.addEventListener("scroll", () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > 150) {
+                header.classList.add(toggleClass);
+            } else {
+                header.classList.remove(toggleClass);
+            }
+        });
+
+
+    </script>
+
+
+</body>
+
+</html>
