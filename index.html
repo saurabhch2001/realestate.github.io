@@ -38,13 +38,15 @@
 
         }
 
+
+
         .nav-item {
 
 
 
 
 
-            font-size: 1vw;
+       
             border-bottom: 3px solid transparent;
 
         }
@@ -85,7 +87,7 @@
 
 
         .logo {
-            width: 2.8vw;
+            width: 25px;
 
         }
 
@@ -93,7 +95,7 @@
 
         .abt-text {
 
-            font-size: 1vw;
+            font-size: 0.8rem;
 
         }
 
@@ -111,25 +113,11 @@
 
         }
 
-        .heading_abt {
-
-            font-size: 1.2vw;
-
-        }
-
-        .subheading_abt {
-
-            font-size: 3vw;
-        }
-
-        .subheading_abt2 {
-
-            font-size: 2vw;
-        }
+       
 
         .card1 {
 
-            width: 15vw;
+            width: 15rem;
 
 
         }
@@ -213,7 +201,12 @@
             height: 4vw;
         }
        
-
+        @media only screen and (max-width: 767px) {
+  .col-interchange-12 {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
 
     </style>
 
@@ -226,7 +219,7 @@
 
     <header class="page-header">
 
-        <nav class="navbar navbar-expand-sm navbar-dark " id="navbar">
+        <nav class="navbar navbar-expand-sm navbar-dark" id="navbar">
             <div class="container">
                 <a class="navbar-brand" href="#"><img src="logo.png" alt="logo" class="logo img-fluid"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -305,7 +298,7 @@
 
 
             <div class="row mt-5">
-                <div class="col  ps-5">
+                <div class="col ">
                     <h4 class="heading_abt text-secondary "> about us </h4>
                     <h1 class="subheading_abt">We Are The Solution</h1>
                     <hr class="hl w-25">
@@ -326,7 +319,7 @@
                     <h5></h5>
 
                 </div>
-                <div class="col mt-3 text-center">
+                <div class="col-12 col-sm-4 col-md-6 align-item-center m-auto">
 
                     <img src="about.jpg" alt="" class="img-fluid abt-img border-2 border border-secondary p-3">
 
@@ -336,19 +329,19 @@
 
 
             <br>
-            <div class="row mb-5 ">
+            <div class="row mb-5  ">
 
 
 
 
-                <div class="col text-center">
+                <div class=" col-12 col-sm-6 col-md-6 m-auto order-1 order-sm-0  ">
 
                     <img src="abt2.jpeg" alt="about" class="img-fluid abt-img2 border-2 border border-secondary p-3">
 
                 </div>
 
 
-                <div class="col  pe-5">
+                <div class="col-12 col-sm-6 col-md-6 m-auto  ">
                     <br>
                     <h4 class="heading_abt text-secondary"> from start to finish </h4>
                     <h1 class="subheading_abt">Client value</h1>
@@ -384,7 +377,7 @@
             <div class="row d-flex justify-content-around  ps-5 pe-5">
 
 
-                <div class="col text-center ">
+                <div class="col-6 text-center ">
 
 
 
@@ -406,7 +399,7 @@
                 </div>
 
 
-                <div class="col text-center ">
+                <div class="col-6 text-center ">
 
 
 
@@ -467,13 +460,13 @@
             <div class="head">
 
                 <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-sm-4 col-4">
                         <hr class="w-25 ms-auto">
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-4 col-4">
                         <h4 class="subheading_abt2 text-center">Architecture & Design</h4>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-4 col-4">
                         <hr class="w-25 text-start">
                     </div>
                 </div>
@@ -505,7 +498,7 @@
 
 
 
-                <div class=" col w-50 text-center">
+                <div class=" col-sm-6 col-md-6 col-12  text-center">
                     <img src="about3.jpg" alt="" class="img-fluid  p-3 border border-dark border-2">
 
 
@@ -513,7 +506,7 @@
                 </div>
 
 
-                <div class="col">
+                <div class="col-12 col-sm-6 col-md-6">
 
                     <div>
                         <h4 class="heading_abt text-secondary">soundproof rooms</h4>
@@ -568,7 +561,7 @@
             </div>
             <div class="row mt-3 mb-5">
 
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-3 col-sm-3 col-6 ">
                     <div class="card p-2">
                         <div class="card-body">
 
@@ -584,7 +577,7 @@
 
 
 
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-3 col-sm-3 col-6">
                     <div class="card p-2">
                         <div class="card-body">
 
@@ -599,7 +592,7 @@
                 </div>
 
 
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-3 col-sm-3 col-6">
                     <div class="card p-2">
                         <div class="card-body">
 
@@ -614,7 +607,7 @@
                 </div>
 
 
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-3 col-sm-3 col-6">
                     <div class="card p-2">
                         <div class="card-body">
 
@@ -636,7 +629,7 @@
 
 
             <div class="row">
-                <div class="col">
+                <div class="col-sm-6 col-md-6 col-12 ">
 
                     <!-- <h4 class="heading_abt text-secondary"> our services </h4> -->
                     <h1 class="subheading_abt2">We're Here To Help You To Find Your Dream House.</h1>
@@ -664,7 +657,7 @@
                     </ul>
 
                 </div>
-                <div class="col text-center">
+                <div class="text-center col-sm-6 col-md-6 col-12 ">
 
                     <img src="service.jpg" alt="" class="img-fluid service-img border-2 border border-secondary p-3">
 
@@ -689,12 +682,12 @@
 
 
 
-            <div class="  row ms-5 ">
+            <div class="row m-auto">
 
 
 
 
-                <div class="col  ms-5">
+                <div class="col-12 col-sm-6 col-md-6 ">
 
 
 
@@ -716,9 +709,9 @@
                     <div class="row">
                         <h4 class="subheading_abt2 ">Our Hours Of Working</h4>
                         <br> <br> <br> <br>
-                        <div class="col">
+                        <div class="col-8 col-sm-6 col-md-6">
 
-                            <div class=" w-75  ">
+                            <div class="  ">
 
                                 <p class="abt-text">Mon-Fri<span class="text-info float-end"> : 09:00-19:00</span></p>
                                 <p class="abt-text">Saturday<span class="text-info float-end"> : 09:00-18:00</span></p>
@@ -729,12 +722,14 @@
 
                         </div>
 
-                        <div class="col">
-                            <div class="map">
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14009.131010558725!2d77.04242715144392!3d28.62128659650445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d04d9e11a08cf%3A0xc1a5a267ef8fd396!2sUttam%20Nagar%2C%20Delhi%2C%20110059!5e0!3m2!1sen!2sin!4v1690718261750!5m2!1sen!2sin"
+                        <div class="col-10 col-sm-6 col-md-6">
+                            <div class="map ">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe class="embed-responsive-item"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14009.131010558725!2d77.04242715144392!3d28.62128659650445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d04d9e11a08cf%3A0xc1a5a267ef8fd396!2sUttam%20Nagar%2C%20Delhi%2C%20110059!5e0!3m2!1sen!2sin!4v1690718261750!5m2!1sen!2sin"
                                     allowfullscreen="" loading="lazy"
                                     referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                  </div>
+                           
 
 
                             </div>
@@ -747,9 +742,9 @@
 
 
 
-                <div class="col mt-5">
+                <div class="col-12 col-sm-6 col-md-6 mt-5">
 
-                    <div class="card w-75 m-auto">
+                    <div class="card w-100 m-auto">
 
                         <div class="card-header">
 
