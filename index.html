@@ -10,8 +10,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
         integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
-
-    <title>Document</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>Realestate</title>
 
     <style>
         body {
@@ -37,6 +38,11 @@
             justify-content: space-between;
 
         }
+
+       
+
+        
+
 
 
 
@@ -69,6 +75,27 @@
 
 
             animation: slideDown 0.35s ease-out;
+        }
+
+        @media screen and (max-width:540px) {
+            .page-header.is-sticky {
+
+
+
+                background-color: rgba(0, 0, 0, 0.884);
+            }
+
+
+            .nav-item a.active {
+                border-bottom: none;
+            }
+
+
+            .nav-item a:hover {
+                border-bottom: none;
+
+            }
+
         }
 
 
@@ -200,13 +227,6 @@
 
             height: 4vw;
         }
-
-        @media only screen and (max-width: 767px) {
-            .col-interchange-12 {
-                display: flex;
-                flex-direction: column-reverse;
-            }
-        }
     </style>
 
 
@@ -252,7 +272,7 @@
 
 
 
-    <div id="home">
+    <div id="home" data-aos="zoom-in" data-aos-duration="1000">
 
         <div id="carouselExampleIndicators" class="carousel slide opacity-50" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -297,7 +317,7 @@
 
 
             <div class="row mt-5">
-                <div class="col ">
+                <div class="col " data-aos="zoom-in-right " data-aos-duration="2000">
                     <h4 class="heading_abt text-secondary "> about us </h4>
                     <h1 class="subheading_abt">We Are The Solution</h1>
                     <hr class="hl w-25">
@@ -318,7 +338,8 @@
                     <h5></h5>
 
                 </div>
-                <div class="col-12 col-sm-4 col-md-6 align-item-center m-auto">
+                <div class="col-12 col-sm-4 col-md-6 align-item-center m-auto" data-aos="fade-down"
+                    data-aos-offset="100" data-aos-duration="1000">
 
                     <img src="about.jpg" alt="" class="img-fluid abt-img border-2 border border-secondary p-3">
 
@@ -333,14 +354,15 @@
 
 
 
-                <div class=" col-12 col-sm-6 col-md-6 m-auto order-1 order-sm-0  ">
+                <div class=" col-12 col-sm-6 col-md-6 m-auto order-1 order-sm-0  " data-aos="fade-up"
+                    data-aos-offset="100" data-aos-duration="1000">
 
                     <img src="abt2.jpeg" alt="about" class="img-fluid abt-img2 border-2 border border-secondary p-3">
 
                 </div>
 
 
-                <div class="col-12 col-sm-6 col-md-6 m-auto  ">
+                <div class="col-12 col-sm-6 col-md-6 m-auto  " data-aos="zoom-in-up" data-aos-duration="2000">
                     <br>
                     <h4 class="heading_abt text-secondary"> from start to finish </h4>
                     <h1 class="subheading_abt">Client value</h1>
@@ -376,7 +398,8 @@
             <div class="row d-flex justify-content-around  ps-5 pe-5">
 
 
-                <div class="col-8 col-sm-4 text-center ">
+                <div class="col-8 col-sm-4 text-center " data-aos="fade-up" data-aos-offset="300"
+                    data-aos-easing="ease-in-sine" data-aos-duration="1200">
 
 
 
@@ -390,7 +413,7 @@
                     <div class="d-flex justify-content-center">
                         <hr class="w-75 ">
                     </div>
-                    <p class="abt-text px-3 text-center">Fully licensed and insured with industry-leading manufature and
+                    <p class="abt-text   text-center">Fully licensed and insured with industry-leading manufature and
                         labor
                         warranties.</p>
 
@@ -398,7 +421,8 @@
                 </div>
 
 
-                <div class="col-8 col-sm-4 text-center ">
+                <div class="col-8 col-sm-4 text-center " data-aos="fade-down" data-aos-easing="linear"
+                    data-aos-duration="1200">
 
 
 
@@ -420,7 +444,8 @@
 
 
 
-                <div class="col-8 col-sm-4 text-center ">
+                <div class="col-8 col-sm-4 text-center " data-aos="fade-up" data-aos-offset="300"
+                    data-aos-duration="1200" data-aos-easing="ease-in-sine">
 
 
 
@@ -456,7 +481,7 @@
 
         <div class="container-fluid bg-primary bg-opacity-10 p-5">
 
-            <div class="head">
+            <div class="head" data-aos="fade-up" data-aos-anchor-placement="bottom-center" data-aos-duration="1000">
 
                 <div class="row">
                     <div class="col-sm-4 col-3">
@@ -497,7 +522,7 @@
 
 
 
-                <div class=" col-sm-12 col-md-6 col-12  text-center">
+                <div class=" col-sm-12 col-md-6 col-12  text-center" data-aos="fade-up" data-aos-duration="1000">
                     <img src="about3.jpg" alt="" class="img-fluid  p-3 border border-dark border-2">
 
 
@@ -508,7 +533,8 @@
                 <div class="col-12 col-sm-12 col-md-6 mt-sm-2 ">
                     <div class="row">
 
-                        <div class="col-sm-6 col-md-12 p-1">
+                        <div class="col-sm-6 col-md-12 p-1" data-aos="fade-down" data-aos-easing="linear"
+                            data-aos-duration="1000">
                             <h4 class="heading_abt text-secondary">soundproof rooms</h4>
                             <hr class="hl2  ">
                             <p class="abt-text">Soundproofing a room is essential for creating a peaceful and private
@@ -526,7 +552,8 @@
                                 and distractions
                             </p>
                         </div>
-                        <div class="col-sm-6 col-md-12 p-1">
+                        <div class="col-sm-6 col-md-12 p-1" data-aos="fade-up" data-aos-easing="linear"
+                            data-aos-duration="1000">
                             <h4 class="heading_abt text-secondary">high quality material</h4>
                             <hr class="hl2  d-flex justify-content-center">
                             <p class="abt-text">When it comes to house, it's important to use high-quality materials
@@ -565,7 +592,7 @@
     <div id="service">
         <div class="container ">
 
-            <div class="mt-2">
+            <div class="mt-2" data-aos="fade-up" data-aos-duration="1000">
                 <h4 class="heading_abt text-secondary "> our service </h4>
                 <h1 class="subheading_abt">What We Have In Store For You</h1>
                 <hr class="hl w-25">
@@ -574,7 +601,7 @@
             </div>
             <div class="row mt-3 mb-3">
 
-                <div class="col-md-3 col-sm-6 col-6 ">
+                <div class="col-md-3 col-sm-6 col-6 " data-aos="fade-up" data-aos-duration="1000">
 
 
                     <div class="card m-1 ">
@@ -596,7 +623,7 @@
 
 
                 <div class="col-md-3 col-sm-6 col-6">
-                    <div class="card m-1 ">
+                    <div class="card m-1 " data-aos="fade-up" data-aos-duration="1000">
                         <div class="card-body">
 
                             <img class="img-fluid w-100" src="properties4.jpg" alt="">
@@ -611,7 +638,7 @@
 
 
                 <div class="col-md-3 col-sm-6 col-6">
-                    <div class="card m-1 ">
+                    <div class="card m-1 " data-aos="fade-up" data-aos-duration="1000">
                         <div class="card-body">
 
                             <img class="img-fluid w-100" src="properties2.jpg" alt="">
@@ -626,7 +653,7 @@
 
 
                 <div class="col-md-3 col-sm-6 col-6">
-                    <div class="card m-1 ">
+                    <div class="card m-1 " data-aos="fade-up" data-aos-duration="1000">
                         <div class="card-body">
 
                             <img class="img-fluid w-100" src="properties3.jpg" alt="">
@@ -647,7 +674,7 @@
 
 
             <div class="row">
-                <div class="col-sm-12 col-md-6 col-12 ">
+                <div class="col-sm-12 col-md-6 col-12 " data-aos="zoom-in-right" data-aos-duration="2000">
 
                     <!-- <h4 class="heading_abt text-secondary"> our services </h4> -->
                     <h1 class="subheading_abt2">We're Here To Help You To Find Your Dream House.</h1>
@@ -675,7 +702,8 @@
                     </ul>
 
                 </div>
-                <div class="text-center col-sm-12 col-md-6 col-12 text-center">
+                <div class="text-center col-sm-12 col-md-6 col-12 text-center" data-aos="fade-up"
+                    data-aos-duration="3000">
 
                     <img src="service.jpg" alt="" class="img-fluid service-img border-2 border border-secondary p-3">
 
@@ -709,7 +737,7 @@
 
 
 
-                    <div class=" pt-3">
+                    <div class=" pt-3" data-aos="fade-up" data-aos-duration="1000">
                         <h4 class="heading_abt text-secondary "> Contact us </h4>
                         <h1 class="subheading_abt2">Contact US When you Get Around </h1>
                         <hr class="hl w-25">
@@ -725,11 +753,12 @@
                     <br>
                     <br>
                     <div class="row">
-                        <h4 class="subheading_abt2 ">Our Hours Of Working</h4>
+                        <h4 class="subheading_abt2 " data-aos="fade-up" data-aos-duration="1500">Our Hours Of Working
+                        </h4>
                         <br> <br> <br> <br>
                         <div class="col-8 col-sm-6 col-md-6">
 
-                            <div class="  ">
+                            <div class="  " data-aos="fade-down" data-aos-duration="2000">
 
                                 <p class="abt-text">Mon-Fri<span class="text-info float-end"> : 09:00-19:00</span></p>
                                 <p class="abt-text">Saturday<span class="text-info float-end"> : 09:00-18:00</span></p>
@@ -740,7 +769,7 @@
 
                         </div>
 
-                        <div class="col-10 col-sm-6 col-md-6">
+                        <div class="col-10 col-sm-6 col-md-6" data-aos="fade-up" data-aos-duration="2000">
                             <div class="map ">
                                 <div class="embed-responsive embed-responsive-16by9">
                                     <iframe title="" class=" w-100 embed-responsive-item"
@@ -763,7 +792,8 @@
 
                 <div class="col-12 col-sm-10  col-md-6 mt-5 m-auto">
 
-                    <div class="card w-100 m-auto">
+                    <div class="card w-100 m-auto" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000">
 
                         <div class="card-header">
 
@@ -892,6 +922,9 @@
                 header.classList.remove(toggleClass);
             }
         });
+
+        AOS.init();
+
 
 
     </script>
